@@ -1,4 +1,13 @@
+using Project.BusinessLayer.Container.ContextExtensions;
+using Project.BusinessLayer.Container.IdentityExtensions;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+//Servisler Buraya Eklenecek 
+
+builder.Services.ContextExtender();
+builder.Services.IdentityExtender();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

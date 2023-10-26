@@ -28,4 +28,9 @@
     <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="7.0.13" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Project.DataAccessLAyer\Project.DataAccessLAyer.csproj" />
+    <ProjectReference Include="..\Project.DTOLayer\Project.DTOLayer.csproj" />
+  </ItemGroup>
+
 </Project>
