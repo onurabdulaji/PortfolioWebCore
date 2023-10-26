@@ -33,4 +33,8 @@
     <ProjectReference Include="..\Project.DTOLayer\Project.DTOLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Container\RepoExtensions\" />
+  </ItemGroup>
+
 </Project>

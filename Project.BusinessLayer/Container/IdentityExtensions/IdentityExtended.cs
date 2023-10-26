@@ -12,7 +12,7 @@ namespace Project.BusinessLayer.Container.IdentityExtensions
 {
     public static class IdentityExtended
     {
-        public static void IdentityExtender(this IServiceCollection services)
+        public static IServiceCollection IdentityExtender(this IServiceCollection services)
         {
             services.AddIdentity<AppUser, AppRole>()
                 .AddEntityFrameworkStores<Context>()
@@ -24,6 +24,8 @@ namespace Project.BusinessLayer.Container.IdentityExtensions
                 (options => options.SignIn.RequireConfirmedEmail = true).
                 AddEntityFrameworkStores<Context>();
             // Login Requirements
+
+            return services;
         }
     }
 }

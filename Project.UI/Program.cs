@@ -4,13 +4,13 @@ using Project.BusinessLayer.Container.IdentityExtensions;
 var builder = WebApplication.CreateBuilder(args);
 
 
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+
 //Servisler Buraya Eklenecek 
 
 builder.Services.ContextExtender();
 builder.Services.IdentityExtender();
-
-// Add services to the container.
-builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 

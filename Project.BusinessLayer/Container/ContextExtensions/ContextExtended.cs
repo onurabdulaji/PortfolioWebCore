@@ -12,7 +12,7 @@ namespace Project.BusinessLayer.Container.ContextExtensions
 {
     public static class ContextExtended
     {
-        public static void ContextExtender(this IServiceCollection services)
+        public static IServiceCollection ContextExtender(this IServiceCollection services)
         {
             ServiceProvider serviceProvider = services.BuildServiceProvider();
             IConfiguration configuration = serviceProvider.GetService<IConfiguration>();
@@ -21,6 +21,8 @@ namespace Project.BusinessLayer.Container.ContextExtensions
                 options.UseSqlServer
                 (configuration.GetConnectionString("Connections"))
                 .UseLazyLoadingProxies());
+
+            return services;
         }
     }
 }
